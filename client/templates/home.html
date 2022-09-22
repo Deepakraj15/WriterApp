@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Home</title>
+
+    <link rel="stylesheet" href="../source/styles/home.css">
+    <script src="../source/script/home.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo inline-block"><img id="logo" src="../templates/images/feather-image.png" alt="">
+                <h1 class="inline-block">Indite..</h1>
+            </div>
+            <div class="other-options inline-block">
+                <ul>
+                    <li><a href="#Categoryloc">Category</a></li>
+                    <li><a href="#Whatsnewloc"> What's New?</a></li>
+                    <li><a href="#about-usloc"> About us</a></li>
+                    <li><a href="./login.html">Login</a></li>
+                    <li><a href="#">Sign Up</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="quotes-box">
+            <p class="random-quotes" id="quotes"></p>
+            <script>
+
+                var typed = new Typed('#quotes',
+                    {
+                        strings: ['If there\'s a books that you want read, and it has not been written yet, then you must write it', 'One day I will find the right words, and they will be simple', 'We write to taste life twice, in the moment and in retrospect', 'A book is a dream you hold in your hand', 'There is no greater agony than bearing an untold story inside you'],
+                        typeSpeed: 100,
+                        backSpeed: 90,
+                        smartBack: true,
+                        loop: true,
+                        shuffle: true,
+                        loopCount: Infinity,
+                        showCursor: true,
+                        cursorChar: '|',
+                        autoInsertCss: true,
+                    });
+            </script>
+        </div>
+        <div>
+    </header>
+    </div>
+    <main>
+        <div class="cards-box" id="Categoryloc">
+            <p class="category-name block-name">Category</p>
+            <div class="cards-holder">
+                <div class="bg-opacity-card">
+                    <p class="genre-tag">Anime</p>
+                    <img id="card1" src=" ./images/anime-genre-cover.jpg" alt="" class="card">
+                </div>
+                <div class="bg-opacity-card">
+                    <p class="genre-tag">Thriller</p>
+
+                    <img id="card2" src="./images/thriller-genre-cover.jpg" alt="" class="card">
+                </div>
+                <div class="bg-opacity-card">
+                    <p class="genre-tag">Novel</p>
+
+                    <img id="card3" src="./images/novel-genre-cover.jpg" alt="" class="card">
+                </div>
+                <div class="bg-opacity-card">
+                    <p class="genre-tag">Romance</p>
+                    <img id="card4" src="./images/romance-genre-cover.jpg" alt="" class="card"">
+            </div>
+            <div class=" bg-opacity-card">
+                    <p class="genre-tag">Action</p>
+                    <img id="card5" src=" ./images/action-genre-cover.jpg" alt="" class="card">
+                </div>
+                <div class="bg-opacity-card">
+                    <p class="genre-tag">Adult</p>
+                    <img id="card6" src="./images/adult-genre-cover.png" alt="" class="card">
+                </div>
+                <div class="bg-opacity-card">
+                    <p class="genre-tag">Humour</p>
+
+                    <img id="card7" src="./images/humour-genre-cover.jpg" alt="" class="card">
+                </div>
+                <div class="bg-opacity-card">
+                    <p class="genre-tag">Fantasy</p>
+
+                    <img id="card8" src="./images/fantasy-genre-cover.jpg" alt="" class="card">
+                </div>
+            </div>
+        </div>
+        <div class="whatsnew-sec cards-box" id="Whatsnewloc">
+            <p class="whatsnew-name block-name">
+                What's New?
+            </p>
+            <div class="cards-holder">
+                <div class="newscard"></div>
+                <div class="newscard"></div>
+                <div class="newscard"></div>
+            </div>
+        </div>
+        <div class="cards-box about-us" id="about-usloc">
+            <p class="about-us-name block-name">About Us</p>
+            <div id="about-info">
+                <label> For more information:
+                    <button id="more-details">Details</button>
+                </label>
+            </div>
+        </div>
+    </main>
+    <footer class="home-footer">
+        <div class=" icon-link">
+            <a href="#" class="footer-link icon-link">
+                <img class="home-icon" src="./images/github-icon.png" alt="">
+
+            </a>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Indite</title>
+    <link rel="stylesheet" href="../source/styles/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script src="../source/script/login.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+
+        <nav>
+            <a href="./home.html"><img src="../templates/images/feather-image.png" alt="" class="inline-block">
+                <p class="inline-block name-logo">indite..</p>
+            </a>
+        </nav>
+    </header>
+    <div class="home-container">
+        <div class="home-form-holder">
+            <h1>LOGIN</h1>
+            <form action="../../server/src/java/FormValidation.java" method="post">
+                <div class="word-display" id="user-text">Username</div>
+                <input type="text" name="username" id="username" onclick="inputSelect()" placeholder="Username"
+                    required>
+                <div class="word-display" id="password-text">Password</div>
+                <input type="password" name="password" id="password" onclick="inputSelect()" placeholder="Password"
+                    required>
+                <div class="display-error">Incorrect Username or Password</div>
+                <button onclick="formValidation()" class="hover btn login-btn" id="login-btn">LOGIN</button>
+            </form>
+
+            <div id="signup-section">
+                <p class="inline-block" id="text-acc">Don't have an account?</p>
+                <button class="inline-block" id="home-signup-btn">Create One !</button>
+                <div class="img-section">
+                    <a href="#">
+                        <img src="../templates/images/google-logo-G.png" alt="" class="inline-block img-logo">
+                    </a>
+                    <a href="#">
+                        <img src="../templates/images/fb-logo.png" alt="" class="inline-block img-logo">
+                    </a>
+                    <a href="#">
+                        <img style="transform: translateY(5px);" src="../templates/images/discord-logo.png"
+                            alt="image not found" class="inline-block img-logo">
+                    </a>
+                    <a href="#">
+                        <img src="../templates/images/twitter-logo.png" alt="" class="inline-block img-logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+</body>
+
+</html>
