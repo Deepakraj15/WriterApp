@@ -8,5 +8,4 @@ function inputSelect() {
 function formValidation() {
     var uname = document.getElementById("user-text");
     var password = document.getElementById("password-text");
-
 }
