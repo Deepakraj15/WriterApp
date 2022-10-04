@@ -1,6 +1,7 @@
 {
-  "name": "server",
+  "name": "writerapp",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "start": "nodemon server.js"
   },

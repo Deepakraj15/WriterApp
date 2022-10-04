@@ -28,7 +28,7 @@ main {
 }
 
 header {
-    background: url("../../templates/images/home-cover-img-black-pen-book.jpg") center center no-repeat;
+    background: url("home-cover-img-black-pen-book.jpg") center center no-repeat;
     background-size: cover;
     height: 500px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
