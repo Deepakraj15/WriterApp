@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="../source/script/login.js" defer></script>
 
 </head>
@@ -23,15 +24,16 @@
     <div class="home-container">
         <div class="home-form-holder">
             <h1>LOGIN</h1>
-            <form>
+            <form id="login-form">
                 <div class="word-display" id="user-text">Username</div>
                 <input type="text" name="username" id="username" onclick="inputSelect()" placeholder="Username"
                     required>
                 <div class="word-display" id="password-text">Password</div>
                 <input type="password" name="password" id="password" onclick="inputSelect()" placeholder="Password"
-                    required>
-                <div class="display-error">Incorrect Username or Password</div>
-                <button onclick="formValidation()" class="hover btn login-btn" id="login-btn">LOGIN</button>
+                    min="8" required>
+                <div class="display-error" id="display-error">Incorrect Username or Password</div>
+                <button onclick="formValidation()" type="submit" class="hover btn login-btn"
+                    id="login-btn">LOGIN</button>
             </form>
 
             <div id="signup-section">
