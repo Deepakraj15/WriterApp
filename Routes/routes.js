@@ -5,4 +5,5 @@ const router = express.Router();
 
 router.get('/', HomePage);
 router.get('/login', LoginPage);
+//router.post('/loginVerfications', LoginVerfication);
 export default router;

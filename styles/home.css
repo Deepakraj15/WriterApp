@@ -70,7 +70,13 @@ ul {
 }
 
 li {
+
+    padding-bottom: 7px;
     margin-right: 20px;
+}
+
+li:hover {
+    border-bottom: 3px solid azure;
 }
 
 a {

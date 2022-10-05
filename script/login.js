@@ -12,7 +12,7 @@ function formValidation() {
     //     document.getElementById("display-error").style.display = "block";
     // }
     $("#login-form").submit(() => {
-        $.post("localhost:3000",
+        $.post("/loginVerification",
             {
                 name: uname,
                 password: password,
