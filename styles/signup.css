@@ -1,10 +1,29 @@
 * {
     margin: 0;
+    outline: none;
 }
 
 form {
+    background-color: red;
+    width: 500px;
     padding: 20px;
     display: flex;
     flex-direction: column;
 
+}
+
+input,
+button {
+    text-indent: ;
+    height: 21px;
+}
+
+input {
+    float: right;
+    width: 200px;
+    border-radius: 20px;
+}
+
+button {
+    width: 150px;
 }
