@@ -5,6 +5,8 @@
 body {
     width: 100%;
     height: max-content;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .icon {
@@ -39,6 +41,11 @@ main {
     height: 20px;
 }
 
+.loader {
+    width: 100%;
+    height: 50px;
+}
+
 .nav-drop-down {
     display: flex;
     flex-direction: column;
@@ -52,10 +59,23 @@ main {
     text-decoration: none;
 }
 
-.drops {
-    display: none;
+.search-container>label,
+input {
+    margin-right: 10px;
+    font-weight: 700;
+    color: azure;
 }
 
+.search-container,
+.drops {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.drops>p {
+    margin-left: 5px;
+}
 
 .nav-drop-down>.drops:hover {
     background-color: green;
@@ -67,9 +87,46 @@ main {
 }
 
 .center-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     background-color: green;
-
     width: 60%;
+}
+
+.post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 40%;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 6px;
+
+}
+
+.post-content {
+    border-radius: inherit;
+    width: 90%;
+    height: 75%;
+    background-color: black;
+
+}
+
+.post-response-content {
+    margin-top: 2%;
+    width: 100%;
+    background-color: blanchedalmond;
+}
+
+.icon-res {
+    margin: 3px 3px 1px 3px;
+    max-width: 25px;
+    padding: 2px;
+    border: 0.3px solid black;
+    border-radius: 5px;
 }
 
 .right-container {
@@ -78,6 +135,8 @@ main {
 }
 
 .content-title {
+    width: 100%;
+    text-align: left;
     text-transform: uppercase;
     margin: 5px 0 0 10px;
     font-size: 20px;
