@@ -2,6 +2,10 @@
 <html lang="en">
 
 <head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feed</title>
     <script src=""></script>
     <link rel="stylesheet" href="feed.css">
@@ -11,31 +15,42 @@
     <nav>
         <div class="search-container">
             <a href="#"><img id="logo" src="" alt=""></a>
-            <label>Search <img src="icons8-search-50.png" class="search-icon"> <input id="search" type="text"></label>
+            <label>Search </label>
+            <input id="search" type="text">
+            <img src="icons8-search-50.png" class="search-icon" onclick="">
         </div>
     </nav>
     <main>
+
         <div class="left-container">
             <div class="nav-drop-down">
                 <a href="#" id="ham-menu"><img src="icons8-menu-rounded-50.png" class="icon" alt=""></a>
-                <a href="#" class="drops"><img src="icons8-home-page-48.png" class="icon" alt="">HOME</a>
-                <a href="#" class="drops"><img src="icons8-activity-feed-48.png" class="icon" alt="">FEED</a>
-                <a href="#" class="drops"><img src="icons8-create-64.png" class="icon" alt="">CREATE</a>
+                <a href="#" class="drops"><img src="icons8-home-page-48.png" class="icon" alt="">
+                    <p>HOME</p>
+                </a>
+                <a href="#" class="drops"><img src="icons8-activity-feed-48.png" class="icon" alt="">
+                    <p> FEED</p>
+                </a>
+                <a href="#" class="drops"><img src="icons8-create-64.png" class="icon" alt="">
+                    <p> CREATE</p>
+                </a>
             </div>
         </div>
         <div class="center-container">
+            <div class="loader"></div>
+
             <p class="content-title">Feeds</p>
 
             <div class="post">
+                <div class="author-details"></div>
                 <div class="post-content">
-                    <img src="" alt="">
                 </div>
                 <div class="post-response-content">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
+                    <img src="icons8-like-64.png" class="icon-res" alt="">
+                    <img src="icons8-comments-50.png" class="icon-res" alt="">
+                    <img src="icons8-donate-50.png" class="icon-res" alt="">
                 </div>
-
+                <div class="time"></div>
             </div>
         </div>
 
