@@ -7,17 +7,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="home.css">
-    <script src="../source/script/home.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            var handlerin = () => {
+                $(".card-head").css("border-radius", "5px");
+                $(".card-head").css("width", "300px");
+                $(".topic").css("display", "block");
+            }
+            var handlerout = () => {
+                $(".card-head").css("width", "fit-content");
+                $(".topic").css("display", "none");
+            }
+            $(".card-head").hover(handlerin, handlerout);
+        })
+
+    </script>
 </head>
 
 <body>
     <header>
         <nav>
-            <div class="logo inline-block"><img id="logo" src="feather-image.png" alt="">
+            <div class="logo inline-block">
+                <img id="logo" src="feather-image.png" alt="">
                 <h1 class="inline-block">Indite..</h1>
             </div>
             <div class="other-options inline-block">
@@ -31,26 +43,35 @@
                 </ul>
             </div>
         </nav>
-        <div class="quotes-box">
-            <p class="random-quotes" id="quotes"></p>
-            <script>
+        <div class="img-stack">
+            <div class="card-head">
+                <img src="icons8-rocket-48.png" alt="">
+                <p class="topic">SUPER SPEED PERFORMANCE</p>
+            </div>
+            <div class="card-head">
+                <img src="icons8-password-48.png" alt="">
+                <p class="topic">END TO END SERVICE</p>
+            </div>
+            <div class="card-head">
+                <img src="icons8-scale-48.png" alt="">
+                <p class="topic">SCALABLE UPTO 500 USERS</p>
+            </div>
+            <div class="card-head">
+                <img src="icons8-certificate-48.png" alt="">
+                <p class="topic">BLOCKCHAIN INTEGRATED</p>
+            </div>
 
-                var typed = new Typed('#quotes',
-                    {
-                        strings: ['If there\'s a books that you want read, and it has not been written yet, then you must write it', 'One day I will find the right words, and they will be simple', 'We write to taste life twice, in the moment and in retrospect', 'A book is a dream you hold in your hand', 'There is no greater agony than bearing an untold story inside you'],
-                        typeSpeed: 100,
-                        backSpeed: 90,
-                        smartBack: true,
-                        loop: true,
-                        shuffle: true,
-                        loopCount: Infinity,
-                        showCursor: true,
-                        cursorChar: '|',
-                        autoInsertCss: true,
-                    });
-            </script>
         </div>
-        <div>
+        <div class="sideimg">
+            <img src="bg-color.png" id="bg" alt="">
+            <img src="header-side-img-removebg-preview.png" alt="">
+        </div>
+
+
+        <div id="arrow">
+            <p id="learn">Learn more</p>
+            <img src="icons8-expand-arrow-50.png" alt="">
+        </div>
     </header>
     </div>
     <main>
@@ -95,11 +116,12 @@
                 </div>
             </div>
         </div>
+
         <div class="whatsnew-sec cards-box" id="Whatsnewloc">
             <p class="whatsnew-name block-name">
                 What's New?
             </p>
-            <div class="cards-holder">
+            <div class="cards-holder news">
                 <div class="newscard"></div>
                 <div class="newscard"></div>
                 <div class="newscard"></div>

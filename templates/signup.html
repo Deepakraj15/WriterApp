@@ -8,17 +8,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="signup.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            var userName = $("#uname").val();
+            var password = $("#pass").val();
+            var rpassword = $("#rpass").val();
+            var age = $("#age").val();
+            var error = $("#error");
+            $("input").change(() => {
+                if (!(userName.length >= 4)) {
+                    setErrorTime();
+                    error.text("Please enter a vaild Username");
+                    $(event.target).css("border", "2px solid red");
+                }
+                else if (!(age >= 13)) {
+                    setErrorTime();
+                    error.text("Under-aged to use this application");
+                }
+                else if (!(password.length >= 8 && rpassword.length >= 8)) {
+                    setErrorTime();
+                    error.text("Password length must be greater than or equal to 8");
+                    $(event.target).css("border", "2px solid red");
+                    if (!(password === rpassword)) {
+                        setErrorTime();
+                        error.text("Passwords doesn't match");
+                        $("#pass").css("border", "2px solid red");
+                        $("rpass").css("border", "2px solid red");
+
+
+
+                    }
+
+                }
+                function setErrorTime() {
+                    setTimeout(() => {
+                        error.css('display', 'block');
+                    }, 5000)
+                }
+
+            })
+        });
+    </script>
 </head>
 
 <body>
-
-    <form>
-        <label>User Name<input type="text"></label>
-        <label>Email<input type="text"></label>
-        <label>Age <input type="text" pattern="[1-100]+" maxlength="3" title="please enter age 1-100"></label>
-        <label>Password<input type="text"></label>
-        <label>Re-enter Password<input type="text"></label>
-        <button>click me</button>
+    <nav>
+        <img id="logo" src="feather-image.png" alt="">
+    </nav>
+    <form method="post">
+        <h1>CREATE AN ACCOUNT</h1>
+        <label>User Name<input type="text" id="uname" required></label>
+        <label>Email<input type="text" id="email" required></label>
+        <label>Age <input type="text" id="age" pattern="[1-100]+" maxlength="3" title="please enter age 1-100"
+                required></label>
+        <label>Password<input type="text" id="pass" required></label>
+        <label>Re-enter Password<input type="text" id="rpass" required></label>
+        <p>Already have an account? <a href="login.html">Sign In</a></p>
+        <p id="error"></p>
+        <button>CREATE</button>
     </form>
 
 </body>

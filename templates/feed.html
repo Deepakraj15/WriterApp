@@ -9,50 +9,110 @@
     <title>Feed</title>
     <script src="feed.js"></script>
     <link rel="stylesheet" href="feed.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+
+        }
+    </script>
 </head>
 
 <body>
     <nav>
+
+        <img id="logo" src="feather-image.png" alt="">
+
         <div class="search-container">
             <a href="#"><img id="logo" src="" alt=""></a>
             <label>Search </label>
             <input id="search" type="text">
             <img src="icons8-search-50.png" class="search-icon" onclick="">
         </div>
+        <div class="user">
+            <img src="icons8-user-64.png" class="icon" alt="">
+            <div id="user-name">Name</div>
+        </div>
     </nav>
     <main>
 
         <div class="left-container">
             <div class="nav-drop-down">
-                <a href="#" id="ham-menu"><img src="icons8-menu-rounded-50.png" class="icon" alt=""></a>
                 <a href="#" class="drops"><img src="icons8-home-page-48.png" class="icon" alt="">
                     <p>HOME</p>
                 </a>
                 <a href="#" class="drops"><img src="icons8-activity-feed-48.png" class="icon" alt="">
-                    <p> FEED</p>
+                    <p>EXPLORE</p>
                 </a>
                 <a href="#" class="drops"><img src="icons8-create-64.png" class="icon" alt="">
                     <p> CREATE</p>
                 </a>
 
                 <a href="#" class="drops"><img src="icons8-books-50.png" class="icon" alt="">
-                    <p> CREATE</p>
+                    <p>BOOKS</p>
                 </a>
             </div>
         </div>
         <div class="center-container">
             <div class="loader"></div>
 
-            <p class="content-title">Feeds</p>
 
             <div class="post">
                 <div class="author-details"></div>
                 <div class="post-content">
                 </div>
                 <div class="post-response-content">
-                    <img src="icons8-like-64.png" class="icon-res" alt="">
-                    <img src="icons8-comments-50.png" class="icon-res" alt="">
-                    <img src="icons8-donate-50.png" class="icon-res" alt="">
+                    <div>
+                        <img src="icons8-like-64.png" class="icon-res" id="likes-icon" alt="">
+                        <p id="likes">Likes</p>
+                    </div>
+                    <div>
+                        <img src="icons8-comments-50.png" class="icon-res" id="comments-icon" alt="">
+                        <p id="comments">Comments</p>
+                    </div>
+                    <div>
+                        <img src="icons8-donate-50.png" class="icon-res" id="donate-icon" alt="">
+                        <p id="donate">Donate</p>
+                    </div>
+                </div>
+                <div class="time"></div>
+            </div>
+            <div class="post">
+                <div class="author-details"></div>
+                <div class="post-content">
+                </div>
+                <div class="post-response-content">
+                    <div>
+                        <img src="icons8-like-64.png" class="icon-res" id="likes-icon" alt="">
+                        <p id="likes">Likes</p>
+                    </div>
+                    <div>
+                        <img src="icons8-comments-50.png" class="icon-res" id="comments-icon" alt="">
+                        <p id="comments">Comments</p>
+                    </div>
+                    <div>
+                        <img src="icons8-donate-50.png" class="icon-res" id="donate-icon" alt="">
+                        <p id="donate">Donate</p>
+                    </div>
+                </div>
+                <div class="time"></div>
+            </div>
+            <div class="post">
+                <div class="author-details"></div>
+                <div class="post-content">
+                </div>
+                <div class="post-response-content">
+                    <div>
+                        <img src="icons8-like-64.png" class="icon-res" id="likes-icon" alt="">
+                        <p id="likes">Likes</p>
+                    </div>
+                    <div>
+                        <img src="icons8-comments-50.png" class="icon-res" id="comments-icon" alt="">
+                        <p id="comments">Comments</p>
+                    </div>
+                    <div>
+                        <img src="icons8-donate-50.png" class="icon-res" id="donate-icon" alt="">
+                        <p id="donate">Donate</p>
+                    </div>
                 </div>
                 <div class="time"></div>
             </div>
