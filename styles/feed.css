@@ -138,8 +138,8 @@ input {
     align-items: center;
     flex-direction: column;
     margin-bottom: 20px;
-    width: 40%;
-    height: 300px;
+    width: 100%;
+    height: 200px;
     border: 1px solid black;
     border-radius: 6px;
 
@@ -147,16 +147,28 @@ input {
 
 .post-content {
     border-radius: inherit;
-    width: 90%;
+    width: 97%;
     height: 75%;
     background-color: var(--dark-black);
 
 }
 
+.author-details {
+    transform: translateX(-20em);
+}
+
+.author-details>img {
+    max-width: 20px;
+}
+
+#author-name {
+    display: inline;
+}
+
 .post-response-content {
     display: flex;
-    transform: translateY(20%);
-    margin-top: 1%;
+    transform: translate(5%, 20%);
+    margin-top: 0.5%;
     width: 100%;
     font-weight: 700;
     font-size: 10px;

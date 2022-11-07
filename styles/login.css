@@ -26,6 +26,22 @@ nav {
     box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.5);
 }
 
+a {
+    text-decoration: none;
+}
+
+#signup {
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: 1px;
+    color: azure;
+    border: 2px solid var(--color3);
+    padding: 10px;
+    border-radius: 7px;
+    float: right;
+    margin: 30px;
+}
+
 .home-container {
     border: 7px solid var(--color3);
     border-radius: 30px;
@@ -53,7 +69,7 @@ h1 {
     text-align: center;
     letter-spacing: 5px;
     transform: translateY(-30px);
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Noto Serif', serif;
     color: var(--color2);
     font-size: 40px;
     margin-top: 50px;
@@ -61,7 +77,8 @@ h1 {
 }
 
 .name-logo {
-    font-family: cursive;
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
     text-transform: uppercase;
     font-size: 40px;
     transform: translate(-10px, -30px);

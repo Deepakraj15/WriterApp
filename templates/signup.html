@@ -35,11 +35,11 @@
                         error.text("Passwords doesn't match");
                         $("#pass").css("border", "2px solid red");
                         $("rpass").css("border", "2px solid red");
-
-
-
                     }
 
+                }
+                else {
+                    $(event.target).css("border", "0.7px solid black");
                 }
                 function setErrorTime() {
                     setTimeout(() => {
@@ -48,6 +48,7 @@
                 }
 
             })
+
         });
     </script>
 </head>
@@ -56,14 +57,14 @@
     <nav>
         <img id="logo" src="feather-image.png" alt="">
     </nav>
-    <form method="post">
+    <form action="http://localhost:5500/register" method="get" id="form-create-user">
         <h1>CREATE AN ACCOUNT</h1>
-        <label>User Name<input type="text" id="uname" required></label>
-        <label>Email<input type="text" id="email" required></label>
-        <label>Age <input type="text" id="age" pattern="[1-100]+" maxlength="3" title="please enter age 1-100"
-                required></label>
-        <label>Password<input type="text" id="pass" required></label>
-        <label>Re-enter Password<input type="text" id="rpass" required></label>
+        <label>User Name<input type="text" id="uname" name="name" required></label>
+        <label>Email<input type="text" id="email" name="email" required></label>
+        <label>Age <input type="text" id="age" name="age" pattern="[1-100]+" maxlength="3"
+                title="please enter age 1-100" required></label>
+        <label>Password<input type="text" id="pass" name="password" required></label>
+        <label>Re-enter Password<input type="text" id="rpass" name="rpassword" required></label>
         <p>Already have an account? <a href="login.html">Sign In</a></p>
         <p id="error"></p>
         <button>CREATE</button>
