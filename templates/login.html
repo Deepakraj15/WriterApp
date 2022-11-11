@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="../source/script/login.js" defer></script>
+
 
 </head>
 
@@ -29,9 +29,9 @@
     <div class="home-container">
         <div class="home-form-holder">
             <h1>LOGIN</h1>
-            <form id="login-form" method="get" action="#">
+            <form id="login-form" method="post" action="/verification">
                 <div class="word-display" id="user-text">Username</div>
-                <input type="text" name="username" id="username" placeholder="Username" required>
+                <input type="text" name="name" id="username" placeholder="Username" required>
                 <div class="word-display" id="password-text">Password</div>
                 <input type="password" name="password" id="password" placeholder="Password" min="8" required>
                 <div class="display-error" id="display-error">Incorrect Username or Password</div>

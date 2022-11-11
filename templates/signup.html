@@ -8,25 +8,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="signup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $(document).ready(() => {
-            var userName = $("#uname").val();
-            var password = $("#pass").val();
-            var rpassword = $("#rpass").val();
-            var age = $("#age").val();
-            var error = $("#error");
-            $("input").change(() => {
+            $("#uname").on('change', () => {
+                var userName = $("#uname").val();
+                var error = $("#error");
                 if (!(userName.length >= 4)) {
                     setErrorTime();
                     error.text("Please enter a vaild Username");
                     $(event.target).css("border", "2px solid red");
                 }
-                else if (!(age >= 13)) {
-                    setErrorTime();
-                    error.text("Under-aged to use this application");
+                else {
+                    error.text('');
+                    $(event.target).css("border", "0.7px solid black");
                 }
-                else if (!(password.length >= 8 && rpassword.length >= 8)) {
+            });
+            $("#pass").on('change', () => {
+                var password = $("#pass").val();
+                var rpassword = $("#rpass").val();
+                var error = $("#error");
+                if (!(password.length >= 8 && rpassword.length >= 8 && password == undefined)) {
                     setErrorTime();
                     error.text("Password length must be greater than or equal to 8");
                     $(event.target).css("border", "2px solid red");
@@ -38,38 +43,43 @@
                     }
 
                 }
-                else {
-                    $(event.target).css("border", "0.7px solid black");
-                }
-                function setErrorTime() {
-                    setTimeout(() => {
-                        error.css('display', 'block');
-                    }, 5000)
-                }
+            });
 
-            })
+            function setErrorTime() {
+                var error = $("#error");
+                setTimeout(() => {
+                    error.css('display', 'block');
+                }, 700)
+                error.css('display', 'none');
+                $("input").css("border", "0.7px solid black");
+
+            }
 
         });
+
+
     </script>
 </head>
 
 <body>
     <nav>
-        <img id="logo" src="feather-image.png" alt="">
-    </nav>
-    <form action="http://localhost:5500/register" method="get" id="form-create-user">
-        <h1>CREATE AN ACCOUNT</h1>
-        <label>User Name<input type="text" id="uname" name="name" required></label>
-        <label>Email<input type="text" id="email" name="email" required></label>
-        <label>Age <input type="text" id="age" name="age" pattern="[1-100]+" maxlength="3"
-                title="please enter age 1-100" required></label>
-        <label>Password<input type="text" id="pass" name="password" required></label>
-        <label>Re-enter Password<input type="text" id="rpass" name="rpassword" required></label>
-        <p>Already have an account? <a href="login.html">Sign In</a></p>
-        <p id="error"></p>
-        <button>CREATE</button>
-    </form>
 
+        <a href="/"><img id="logo" src="feather-image.png" alt=""></a>
+        <a href="/login" id="login">Login</a>
+    </nav>
+    <main>
+        <h1>SIGNUP</h1>
+        <form action="/register" method="post" id="form-create-user">
+
+            <label>User Name<input type="text" id="uname" name="name" required></label>
+            <label>Email<input type="text" id="email" name="email" required></label>
+            <label>Password<input type="password" id="pass" name="password" required></label>
+            <label>Re-enter Password<input type="password" id="rpass" name="rpassword" required></label>
+            <p>Already have an account? <a href="login.html">Sign In</a></p>
+            <p id="error"></p>
+            <button>CREATE</button>
+        </form>
+    </main>
 </body>
 
 </html>

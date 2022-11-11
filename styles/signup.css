@@ -11,23 +11,33 @@
     outline: none;
     font-weight: 600;
     outline: none;
+    overflow: hidden;
 }
 
 body {
     width: 100%;
     height: 100vh;
-    display: flex;
     background-color: var(--sunflower-light);
-    justify-content: center;
+
+}
+
+main {
+    width: inherit;
+    height: inherit;
+    display: flex;
     align-items: center;
+    flex-direction: column;
 }
 
 nav {
-    height: 100px;
+    width: 100%;
+    height: 110px;
+    background: linear-gradient(to right bottom, #151fe2, #561be7, #7a17ec, #9812f0, #b30df3)center center no-repeat;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 #logo {
-    max-width: 150px;
+    max-width: 120px;
     position: absolute;
     top: 0%;
     left: 1%;
@@ -45,13 +55,23 @@ a {
     text-decoration: none;
 }
 
-h1 {
-    position: absolute;
-    top: 20%;
+#login {
+    margin: 30px 30px 0 0;
+    float: right;
+    padding: 10px;
+    border: 2px solid var(--sunflower-light);
+    border-radius: 10px;
     color: var(--white-cream);
 }
 
+h1 {
+    letter-spacing: 2px;
+    transform: translate(-6.5em, 3em);
+    color: var(--royal-blue);
+}
+
 form {
+    transform: translateY(30%);
     color: var(--dark-black);
     background-color: var(--white-cream);
     box-shadow: 3px 3px 3px var(--white-cream);
@@ -60,7 +80,7 @@ form {
     display: flex;
     border-radius: 7px;
     flex-direction: column;
-
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 input,
@@ -70,6 +90,7 @@ button {
 }
 
 label {
+    font-family: 'Noto Serif', serif;
     margin-bottom: 17px;
 }
 
@@ -85,8 +106,9 @@ button {
     margin: 30px 0 0 30%;
     background-color: var(--royal-blue);
     color: var(--white-cream);
-    height: 25px;
+    height: 27px;
     width: 175px;
     border: 0.2px solid var(--dark-black);
     border-radius: 7px;
+    letter-spacing: 2px;
 }

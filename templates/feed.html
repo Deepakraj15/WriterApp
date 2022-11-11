@@ -9,6 +9,7 @@
     <title>Feed</title>
     <script src="feed.js"></script>
     <link rel="stylesheet" href="feed.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
 
@@ -16,24 +17,11 @@
 </head>
 
 <body>
-    <nav>
 
-        <img id="logo" src="feather-image.png" alt="">
-
-        <div class="search-container">
-            <a href="#"><img id="logo" src="" alt=""></a>
-            <label>Search </label>
-            <input id="search" type="text">
-            <img src="icons8-search-50.png" class="search-icon" onclick="">
-        </div>
-        <div class="user">
-            <img src="icons8-user-64.png" class="icon" alt="">
-            <div id="user-name">Name</div>
-        </div>
-    </nav>
     <main>
 
         <div class="left-container">
+            <img id="logo" src="feather-image.png" alt="">
             <div class="nav-drop-down">
                 <a href="#" class="drops"><img src="icons8-home-page-48.png" class="icon" alt="">
                     <p>HOME</p>
@@ -44,13 +32,22 @@
                 <a href="#" class="drops"><img src="icons8-create-64.png" class="icon" alt="">
                     <p> CREATE</p>
                 </a>
-
                 <a href="#" class="drops"><img src="icons8-books-50.png" class="icon" alt="">
                     <p>BOOKS</p>
                 </a>
             </div>
         </div>
         <div class="center-container">
+            <nav>
+                <div class="search-container">
+                    <label>Search </label>
+                    <input id="search" type="text">
+                    <img src="icons8-search-50.png" class="search-icon" onclick="">
+                </div>
+                <div class="user">
+                    <img src="icons8-user-64.png" class="icon" alt="">
+                </div>
+            </nav>
             <div class="loader"></div>
 
 
@@ -77,52 +74,12 @@
                 </div>
                 <div class="time"></div>
             </div>
-            <div class="post">
-                <div class="author-details"></div>
-                <div class="post-content">
-                </div>
-                <div class="post-response-content">
-                    <div>
-                        <img src="icons8-like-64.png" class="icon-res" id="likes-icon" alt="">
-                        <p id="likes">Likes</p>
-                    </div>
-                    <div>
-                        <img src="icons8-comments-50.png" class="icon-res" id="comments-icon" alt="">
-                        <p id="comments">Comments</p>
-                    </div>
-                    <div>
-                        <img src="icons8-donate-50.png" class="icon-res" id="donate-icon" alt="">
-                        <p id="donate">Donate</p>
-                    </div>
-                </div>
-                <div class="time"></div>
-            </div>
-            <div class="post">
-                <div class="author-details"></div>
-                <div class="post-content">
-                </div>
-                <div class="post-response-content">
-                    <div>
-                        <img src="icons8-like-64.png" class="icon-res" id="likes-icon" alt="">
-                        <p id="likes">Likes</p>
-                    </div>
-                    <div>
-                        <img src="icons8-comments-50.png" class="icon-res" id="comments-icon" alt="">
-                        <p id="comments">Comments</p>
-                    </div>
-                    <div>
-                        <img src="icons8-donate-50.png" class="icon-res" id="donate-icon" alt="">
-                        <p id="donate">Donate</p>
-                    </div>
-                </div>
-                <div class="time"></div>
-            </div>
         </div>
-
         <div class="right-container">
             <p class="content-title">Trending Feeds</p>
 
         </div>
+
 
     </main>
 </body>

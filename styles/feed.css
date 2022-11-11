@@ -4,11 +4,11 @@
     --sunflower-light: #e1bc29;
     --white-cream: #F2F4F3;
     --dark-black: #0A0908;
+    --gray-color: #494d4b;
 }
 
 * {
     margin: 0;
-    color: var(--royal-blue);
 }
 
 body {
@@ -16,31 +16,7 @@ body {
     height: max-content;
     overflow-x: hidden;
     overflow-y: scroll;
-    background-color: var(--white-cream);
-}
-
-.icon {
-    max-width: 30px;
-}
-
-.search-icon {
-    max-width: 23px;
-}
-
-nav {
-    width: 100%;
-    height: 90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 2px solid black;
-}
-
-#logo {
-    max-width: 150px;
-    position: absolute;
-    top: -4%;
-    left: -2%;
+    color: var(--white-cream);
 }
 
 main {
@@ -49,27 +25,11 @@ main {
 
 }
 
-#search {
-    border: 0.3px solid black;
-    outline: none;
-    border-radius: 4px;
-    width: 70%;
-    height: 20px;
-}
 
 .loader {
     display: none;
     width: 100%;
     height: 50px;
-}
-
-.user {
-    /* User profile picture */
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    right: 3%;
 }
 
 .nav-drop-down {
@@ -80,18 +40,13 @@ main {
 }
 
 .nav-drop-down>a {
+    padding: 10px;
     margin-bottom: 20px;
     font-weight: 700;
     text-decoration: none;
 }
 
-.search-container>label,
-input {
-    margin-right: 10px;
-    font-weight: 700;
-}
 
-.search-container,
 .drops {
     display: flex;
     justify-content: left;
@@ -100,36 +55,79 @@ input {
 
 .drops>p {
     margin-left: 5px;
+    color: var(--dark-black);
+
 }
 
-#user-name {
-    font-weight: 600;
-    font-size: 17px;
-    letter-spacing: 1.2px;
+.drops {
+    margin-left: 15px;
 
+    width: 75%;
+    border-radius: 10px;
 }
 
 .nav-drop-down>.drops:hover {
-    background-color: var(--sunflower-light);
+    background-color: var(--white-cream);
 }
 
 .left-container {
-    padding-top: 20px;
-    margin-left: 20px;
+    border-right: 0.7px solid black;
+    border-radius: 7px;
     width: 20%;
+    color: var(--dark-black);
+    background-color: var(--sunflower-light);
+
 }
 
 .center-container {
     /*Feeds section*/
-    border-radius: 20px;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
     height: 1700px;
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 60%;
-    padding-top: 20px;
+}
+
+.icon,
+.search-icon {
+    max-width: 30px;
+}
+
+.icon {
+    margin-right: 20px;
+}
+
+nav {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: inherit;
+}
+
+.search-container {
+    color: var(--dark-black);
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 20px 0 20px 0;
+}
+
+#search {
+    width: 75%;
+    height: 30px;
+}
+
+#logo {
+    max-width: 100px;
+
 }
 
 .post {
@@ -137,11 +135,16 @@ input {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-right: 20px;
     margin-bottom: 20px;
-    width: 100%;
-    height: 200px;
-    border: 1px solid black;
+    width: 90%;
+    height: 300px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
     border-radius: 6px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: var(--dark-black);
+    background-color: var(--white-cream);
 
 }
 
@@ -149,15 +152,17 @@ input {
     border-radius: inherit;
     width: 97%;
     height: 75%;
-    background-color: var(--dark-black);
-
+    border: 0.7px solid var(--dark-black);
 }
 
 .author-details {
-    transform: translateX(-20em);
+    width: 100%;
+    height: 25px;
+
 }
 
 .author-details>img {
+    margin-left: 10px;
     max-width: 20px;
 }
 
@@ -167,8 +172,7 @@ input {
 
 .post-response-content {
     display: flex;
-    transform: translate(5%, 20%);
-    margin-top: 0.5%;
+    margin: 0.5% 0 0 10px;
     width: 100%;
     font-weight: 700;
     font-size: 10px;
@@ -191,8 +195,8 @@ input {
 
 .right-container {
     padding-top: 20px;
-    border-radius: 20px;
-    background-color: var(--sunflower-light);
+    border-radius: 7px;
+    background-color: var(--royal-blue);
     width: 40%;
 }
 
