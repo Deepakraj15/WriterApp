@@ -1,5 +1,11 @@
+import Post from "../models/Post.js";
 const Feed = (req, res) => {
-    res.sendFile('/feed.html', { root: 'templates' });
+    Post.find({}, (err, post) => {
+        res.render('feed.ejs', {
+            postList: post
+        })
+    })
+
 }
 
 export default Feed;

@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feed</title>
-    <script src="feed.js"></script>
     <link rel="stylesheet" href="feed.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -29,7 +28,7 @@
                 <a href="#" class="drops"><img src="icons8-activity-feed-48.png" class="icon" alt="">
                     <p>EXPLORE</p>
                 </a>
-                <a href="#" class="drops"><img src="icons8-create-64.png" class="icon" alt="">
+                <a href="/createpost" class="drops"><img src="icons8-create-64.png" class="icon" alt="">
                     <p> CREATE</p>
                 </a>
                 <a href="#" class="drops"><img src="icons8-books-50.png" class="icon" alt="">
@@ -49,14 +48,15 @@
                 </div>
             </nav>
             <div class="loader"></div>
-
-
+            <!-- <% //postList.forEach((post) => { %>
+    
             <div class="post">
                 <div class="author-details">
                     <img src="icons8-user-64.png" alt="">
-                    <p id="author-name">NAME</p>
+                   <%=// <p id="author-name"> post.authorName</p> %>
                 </div>
                 <div class="post-content">
+                    <%= //post.postContent %>
                 </div>
                 <div class="post-response-content">
                     <div>
@@ -72,12 +72,16 @@
                         <p id="donate">Donate</p>
                     </div>
                 </div>
-                <div class="time"></div>
-            </div>
+                <%=//<div class="time">post.createdAt</div>%>
+           <%// }); %> -->
+            </div>   
         </div>
+   
+     
         <div class="right-container">
-            <p class="content-title">Trending Feeds</p>
-
+            <div class="trending">
+                <p class="content-title">Trending Feeds</p>
+            </div>
         </div>
 
 

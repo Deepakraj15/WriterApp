@@ -1,13 +1,16 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import routes from './Routes/routes.js';
-
+import cookieparser from 'cookie-parser';
+import ejs from 'ejs';
 import * as dotenv from 'dotenv'
 dotenv.config()
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(cookieparser());
+app.set('view engine', 'ejs');
 app.use('/', routes);
 app.use(express.static('styles'))
 app.use(express.static('images'));

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/createPost.css">
+    <title>Create Post</title>
+</head>
+<body>
+    <main>
+    <form action="/addPost" method="post">
+        <textarea name="postContent" id="postContent" cols="30" rows="10" placeholder="Type Something...."></textarea>
+    <div class="btn-container">
+        <button  id="create-post-btn">Create</button>
+        <button id="reset-post-btn" onclick="window.reload()">Reset</button>
+    </div>
+    </form>
+</main>
+</body>
+</html>
