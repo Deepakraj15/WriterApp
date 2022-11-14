@@ -54,7 +54,28 @@ a {
     left: 35%;
     padding: 30px;
 }
-
+.pop-up{
+    color:red;
+    position:fixed;
+    left: 45%;
+    top: 20px;
+    padding: 17px;
+    background-color: azure;
+    border-radius: 10px;
+    font-weight: 700;
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    animation:popup 0.9s alternate-reverse 1;
+}
+@keyframes popup {
+    from{
+        top:0;
+    }
+    to{
+        top:20px;
+        opacity: 1;
+    }
+}
 .home-form-holder {
     width: 300px;
     height: 400px;

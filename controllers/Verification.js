@@ -1,20 +1,24 @@
 
 import User from "../models/User.js";
 const Verification = async (req, res) => {
+    var data = 0;
     const output = await User.exists({ name: req.body.name, password: req.body.password });
     if (output === null) {
-        res.redirect('/login');
+        data = 1
+        console.log(data)
+        res.render('login.ejs', { data: data });
     }
     else {
-        if (req.cookies.cookieName === undefined) {
-            res.cookie('cookieName', `${req.body.name + Math.floor(Math.random() * 10)}`, {
-                secure: true,
-                maxAge: 7000,
+        var cookie = req.cookies.cookieName;
+        if (cookie === undefined) {
+            res.cookie('cookieName', `${req.body.name}`, {
+                maxAge: 90000000,
+                httpOnly: true,
             });
-            console.log('cookie has been successfully stored ' + req.cookies.cookieName)
+            console.log(cookie)
         }
         else {
-            console.log(req.cookies.cookieName);
+            console.log(cookie+' already exist');
         }
         res.redirect('/feed');
     }

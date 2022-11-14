@@ -5,17 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/createPost.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <script>
+        $(document).ready(()=>{
+            $('.bg-circle').on('click',function(){
+                var bgCircle =$(this).attr('value');
+               
+                $('.preview').css('background-color',bgCircle)
+            })
+            $('#color-pick').change(function(){
+                var bgCircle = $(this).val();
+                console.log(bgCircle);
+                $('.preview').css('background-color',bgCircle);
+            })
+            $('textarea').keydown(function(){
+                var char = $(this).val();
+                $('.preview').text(char);
+            });
+        })
+    </script>
     <title>Create Post</title>
 </head>
 <body>
     <main>
-    <form action="/addPost" method="post">
-        <textarea name="postContent" id="postContent" cols="30" rows="10" placeholder="Type Something...."></textarea>
-    <div class="btn-container">
-        <button  id="create-post-btn">Create</button>
-        <button id="reset-post-btn" onclick="window.reload()">Reset</button>
-    </div>
-    </form>
-</main>
+        <div class="text-area">
+            <form action="/addPost" method="post">
+                <textarea name="postContent" id="postContent" cols="30" rows="10" placeholder="Type Something...."></textarea>
+                <button  id="create-post-btn">Post</button>    
+            </form>
+            <div class="bg-section">
+                <input type="color" name="color-pick" id="color-pick">
+                <div class="bg-circle"  value="#EFF5F5" style="background-color:#EFF5F5;"></div>
+                <div class="bg-circle" value="#B2B2B2" style="background-color: #B2B2B2;"></div>
+                <div class="bg-circle" value="#B4CDE6" style="background-color:#B4CDE6 ;"></div>
+                <div class="bg-circle" value="#FFF9B0" style="background-color:#FFF9B0 ;"></div>
+                <div class="bg-circle" value="#87A2FB" style="background-color:#87A2FB ;"></div>
+            </div>
+        </div>
+        <div class="container-preview">
+        <h1>PREVIEW</h1>
+        <div class="preview">
+        </div>
+        </div>
+    </main>
+   
 </body>
 </html>

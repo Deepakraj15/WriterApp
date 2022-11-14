@@ -16,6 +16,7 @@ const PostSchema = mongoose.Schema({
     },
     comments: {
         type: Number,
+        default: 0,
     },
     commentList: {
         type: Array,
@@ -23,6 +24,7 @@ const PostSchema = mongoose.Schema({
     },
     likes: {
         type: Number,
+        default: 0,
     },
     likeList: {
         type: Array,

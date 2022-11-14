@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Indite</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+    <header>
+
+        <nav>
+            <a href="/"><img src="feather-image.png" alt="" class="inline-block">
+                <p class="inline-block name-logo">indite..</p>
+            </a>
+            <a id="signup" href="/signup">Sign Up</a>
+        </nav>
+    </header>
+    <div class="home-container">
+        <div class="home-form-holder">
+            <h1>LOGIN</h1>
+            <form id="login-form" method="post" action="/verification">
+                <div class="word-display" id="user-text">Username</div>
+                <input type="text" name="name" id="username" placeholder="Username" required>
+                <div class="word-display" id="password-text">Password</div>
+                <input type="password" name="password" id="password" placeholder="Password" min="8" required>
+                <% if( data == 1){%>
+                    <p class="pop-up">User not found !</p>
+                <%}%>
+                <div class="display-error" id="display-error">Incorrect Username or Password</div>
+                <button class="hover btn login-btn" id="login-btn">LOGIN</button>
+            </form>
+
+            <div id="signup-section">
+                <p class="inline-block" id="text-acc">Don't have an account?</p>
+                <button class="inline-block" id="home-signup-btn">Create One !</button>
+                <div class="img-section">
+                    <a href="#">
+                        <img src="google-logo-G.png" alt="" class="inline-block img-logo">
+                    </a>
+                    <a href="#">
+                        <img src="fb-logo.png" alt="" class="inline-block img-logo">
+                    </a>
+                    <a href="#">
+                        <img style="transform: translateY(5px);" src="discord-logo.png" alt="image not found"
+                            class="inline-block img-logo">
+                    </a>
+                    <a href="#">
+                        <img src="twitter-logo.png" alt="" class="inline-block img-logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+</body>
+
+</html>
