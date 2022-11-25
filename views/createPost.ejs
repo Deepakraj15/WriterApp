@@ -30,13 +30,16 @@
 <body>
     <main>
                     <img id="logo" src="feather-image.png" alt="">
-                    <a id="tofeed" href="/feed">Back to Home &gt;</a>
+                    <a id="tofeed" href="/feed">Back to feed</a>
+
         <div class="text-area">
             <form action="/addPost" method="post">
                 <textarea name="postContent" id="postContent" cols="30" rows="10" placeholder="Type Something...."></textarea>
                 <button  id="create-post-btn">Post</button>    
                 <input type="color" name="colorPick" id="colorPick" style="display: none;">
+
             </form>
+            <p class="alert">Post is successful</p>
             <div class="bg-section">
                 <div class="bg-circle" value="#EFF5F5" style="background-color:#EFF5F5;"></div>
                 <div class="bg-circle" value="#FCA74B" style="background-color: #fca74b;"></div>

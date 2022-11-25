@@ -8,7 +8,6 @@ const PostSchema = mongoose.Schema({
         type: String,
         require: true,
         default: 'Indite User',
-
     },
     authorPic: {
         type: String,
@@ -29,6 +28,13 @@ const PostSchema = mongoose.Schema({
     likeList: {
         type: Array,
         default: [],
+    },
+    bgColor:{
+        type: String,
+    },
+    fontColor: {
+        type: String,
+        default: 'black',
     }
 }, {
     timeStamps: true,

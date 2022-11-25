@@ -53,6 +53,8 @@ nav {
 a {
     margin-left: 20px;
     text-decoration: none;
+    padding: 5px;
+    border: 1px solid var(--royal-blue);
 }
 
 #login {
@@ -66,19 +68,18 @@ a {
 
 h1 {
     letter-spacing: 2px;
-    transform: translate(-6.5em, 3em);
+    transform: translateY(2em);
     color: var(--royal-blue);
 }
 
 form {
-    transform: translateY(30%);
+    transform: translateY(20%);
     color: var(--dark-black);
     background-color: var(--white-cream);
-    box-shadow: 3px 3px 3px var(--white-cream);
-    width: 500px;
-    padding: 50px 20px 50px 20px;
+    padding: 50px;
     display: flex;
-    border-radius: 7px;
+    align-items: center;
+    border-radius: 10px;
     flex-direction: column;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
@@ -89,26 +90,31 @@ button {
     height: 21px;
 }
 
-label {
-    font-family: 'Noto Serif', serif;
-    margin-bottom: 17px;
-}
-
 
 input {
+    font-family: 'Noto Serif', serif;
+    border: none;
+    padding: 5px;
+    border-bottom:2px solid gray ;
     text-indent: 5px;
-    float: right;
-    width: 200px;
-    border-radius: 7px;
+    width: 250px;
+    background-color: transparent;
+    margin:10px 0 20px  10px;
 }
 
+
 button {
-    margin: 30px 0 0 30%;
+    margin: 30px 0 0 0;
     background-color: var(--royal-blue);
     color: var(--white-cream);
-    height: 27px;
+    height: 30px;
     width: 175px;
     border: 0.2px solid var(--dark-black);
     border-radius: 7px;
     letter-spacing: 2px;
+}
+p{
+    font-size: 15px;
+    margin-top: 20px;
+    font-weight: 700;
 }

@@ -20,11 +20,11 @@
                 if (!(userName.length >= 4)) {
                     setErrorTime();
                     error.text("Please enter a vaild Username");
-                    $(event.target).css("border", "2px solid red");
+                    $(event.target).css("border-bottom", "2px solid red");
                 }
                 else {
                     error.text('');
-                    $(event.target).css("border", "0.7px solid black");
+                    $(event.target).css("border-bottom", "0.7px solid black");
                 }
             });
             $("#pass").on('change', () => {
@@ -34,12 +34,12 @@
                 if (!(password.length >= 8 && rpassword.length >= 8 && password == undefined)) {
                     setErrorTime();
                     error.text("Password length must be greater than or equal to 8");
-                    $(event.target).css("border", "2px solid red");
+                    $(event.target).css("border-bottom", "2px solid red");
                     if (!(password === rpassword)) {
                         setErrorTime();
                         error.text("Passwords doesn't match");
-                        $("#pass").css("border", "2px solid red");
-                        $("rpass").css("border", "2px solid red");
+                        $("#pass").css("border-bottom", "2px solid red");
+                        $("rpass").css("border-bottom", "2px solid red");
                     }
 
                 }
@@ -51,7 +51,7 @@
                     error.css('display', 'block');
                 }, 700)
                 error.css('display', 'none');
-                $("input").css("border", "0.7px solid black");
+                $("input").css("border-bottom", "0.7px solid black");
 
             }
 
@@ -68,14 +68,13 @@
         <a href="/login" id="login">Login</a>
     </nav>
     <main>
-        <h1>SIGNUP</h1>
+        <h1>SIGN UP</h1>
         <form action="/register" method="post" id="form-create-user">
-
-            <label>User Name<input type="text" id="uname" name="name" required></label>
-            <label>Email<input type="text" id="email" name="email" required></label>
-            <label>Password<input type="password" id="pass" name="password" required></label>
-            <label>Re-enter Password<input type="password" id="rpass" name="rpassword" required></label>
-            <p>Already have an account? <a href="login.html">Sign In</a></p>
+            <input type="text" id="uname" name="name" required placeholder="User Name">
+            <input type="text" id="email" name="email" required placeholder="Email">
+            <input type="password" id="pass" name="password" required placeholder="Password">
+            <input type="password" id="rpass" name="rpassword" required placeholder="Confirm Password">
+            <p>Have an account? <a href="login.html">Sign In</a></p>
             <p id="error"></p>
             <button>CREATE</button>
         </form>

@@ -1,8 +1,10 @@
 import Post from "../models/Post.js";
-const Feed = (req, res) => {
+const Feed =  (req, res) => {
     Post.find({}, (err, post) => {
-        res.render('feed.ejs', {
-            postList: post
+        var name = req.cookies.cookieName;
+       res.render('feed.ejs', {
+           postList: post,
+           uname: name
         })
     })
 

@@ -1,5 +1,5 @@
 :root {
-    --royal-blue: #151FE2;
+    --royal-blue: #2329db;
     --pinky-blue: #B30DF3;
     --sunflower-light: #e1bc29;
     --white-cream: #F2F4F3;
@@ -267,31 +267,11 @@ li:hover {
     border-radius: 20px;
     width: 1450px;
     height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-#more-details {
-    color: var(--white-cream);
-    background-color: var(--royal-blue);
-    width: 100px;
-    font-size: 17px;
-    border-radius: 7px;
-    padding: 5px;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-#more-details:hover {
-    transform: translateY(-1px);
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
-
-label {
-    font-size: 17px;
-    font-weight: 600;
-}
+.info{
+    padding: 120px;
+    }
 
 .home-footer {
     position: absolute;
@@ -304,11 +284,14 @@ label {
 }
 
 .icon-link {
-    margin: 20px;
+    display: flex;
+    margin: 0 10px 10px 5px;
     width: fit-content;
     align-self: flex-end;
 }
-
+address{
+    transform: translateY(20px);
+}
 .home-icon {
     background-color: azure;
     border-radius: 50%;

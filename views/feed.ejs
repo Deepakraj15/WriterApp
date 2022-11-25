@@ -10,9 +10,7 @@
     <link rel="stylesheet" href="feed.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
-
-    </script>
+    
 </head>
 
 <body>
@@ -22,18 +20,21 @@
         <div class="left-container">
             <img id="logo" src="feather-image.png" alt="">
             <div class="nav-drop-down">
-                <a href="#" class="drops"><img src="icons8-home-page-48.png" class="icon" alt="">
+                <a href="/feed" class="drops"><img src="icons8-home-page-48.png" class="icon" alt="">
                     <p>HOME</p>
                 </a>
-                <a href="#" class="drops"><img src="icons8-activity-feed-48.png" class="icon" alt="">
+                <a href="/pageUnderConst" class="drops"><img src="icons8-activity-feed-48.png" class="icon" alt="">
                     <p>EXPLORE</p>
                 </a>
-                <a href="/createpost" class="drops"><img src="icons8-create-64.png" class="icon" alt="">
-                    <p> CREATE</p>
+                <a href="/createpost" class="drops"><img style="max-height:38px;" src="icons8-create-64.png" class="icon" alt="">
+                    <p>CREATE</p>
                 </a>
                 <a href="#" class="drops"><img src="icons8-books-50.png" class="icon" alt="">
                     <p>BOOKS</p>
                 </a>
+            </div>
+            <div class="low-container">
+               <a href="/settings"> <img id="settings"src="/icons8-gear-64.png" alt=""></a>
             </div>
         </div>
         <div class="center-container">
@@ -45,42 +46,88 @@
                 </div>
                 <div class="user">
                     <img src="icons8-user-64.png" class="icon" alt="">
+                   <p> <%= uname.name%></p>
                 </div>
+                
             </nav>
             <div class="loader"></div>
-            <!-- <% //postList.forEach((post) => { %>
-    
+           
+                 <% postList.forEach((post)=> { %>
             <div class="post">
+               
                 <div class="author-details">
                     <img src="icons8-user-64.png" alt="">
-                   <%=// <p id="author-name"> post.authorName</p> %>
+                    <p id="author-name"><%= post.authorName%></p>
+                </div> 
+                
+                <% if(post.bgColor.includes('#eff5f5')){%>
+                
+               <div class="post-content" id="color1">
+               
+                    <%= post.postContent %>
                 </div>
-                <div class="post-content">
-                    <%= //post.postContent %>
+                <%}%>
+                <%  if(post.bgColor.includes('#fca74b')){%>
+
+               <div class="post-content" id="color2">
+                
+                    <%= post.postContent %>
                 </div>
+                <%}%>              
+               <%  if(post.bgColor.includes('#b4cde6')){%>
+                     <div class="post-content" id="color3"> 
+                    <%= post.postContent %>
+                </div>
+                <%}%>
+                <%  if(post.bgColor.includes('#fff9b0')){%>
+
+               <div class="post-content" id="color4"> 
+                    <%= post.postContent %>
+                </div>
+                <%}%>
+                <%  if(post.bgColor.includes('#87a2fb')){%>
+                     <div class="post-content" id="color5"> 
+                    <%= post.postContent %>
+                </div>
+                <%}%>
+                <% if(post.bgColor.includes('azure')){ %>
+                     <div class="post-content" id="colordefault"> 
+                    <%= post.postContent %>
+                </div>
+                <%}%>
+
+               
                 <div class="post-response-content">
                     <div>
                         <img src="icons8-like-64.png" class="icon-res" id="likes-icon" alt="">
-                        <p id="likes">Likes</p>
+                       <p id="likes"><%= post.likes%></p>
                     </div>
                     <div>
                         <img src="icons8-comments-50.png" class="icon-res" id="comments-icon" alt="">
-                        <p id="comments">Comments</p>
+                        <p id="comments"><%= post.comments %></p>
                     </div>
-                    <div>
+                    <div id="donate-div">
                         <img src="icons8-donate-50.png" class="icon-res" id="donate-icon" alt="">
                         <p id="donate">Donate</p>
                     </div>
-                </div>
-                <%=//<div class="time">post.createdAt</div>%>
-           <%// }); %> -->
-            </div>   
+                    <div class="time"></div>
+                </div> 
+                
+          
+            </div> 
+             <% }) %>
+            
         </div>
    
      
         <div class="right-container">
             <div class="trending">
-                <p class="content-title">Trending Feeds</p>
+                <p class="content-title">What's Trending</p>
+                <div class="trends">
+                    <p>#Sample 1</p>
+                    <p>#Sample 2</p>
+                    <p>#Sample 3</p>
+                </div>
             </div>
         </div>
 
